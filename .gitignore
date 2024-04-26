@@ -1,0 +1,27 @@
+/vendor/
+/node_modules/
+
+# Ignore configuration files that may contain sensitive information
+/config.php
+/config/*.php
+
+# Ignore specific file formats
+*.log
+*.cache
+*.backup
+*.sql
+*.tar.gz
+
+# Ignore Composer's files
+/composer.lock
+/composer.phar
+
+# Ignore IDE and editor files
+/.idea/
+*.sublime-workspace
+*.sublime-project
+.vscode/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
