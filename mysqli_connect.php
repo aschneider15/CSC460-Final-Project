@@ -1,23 +1,17 @@
-<?php # Script 17.x - mysqli_connect.php
+<?php
 
 // This file contains the database access information.
-// This file also establishes a connection to MySQL
-// and selects the database.
+// This file also establishes a connection to MySQL,
+// selects the database, and sets the encoding.
 
 // Set the database access information as constants:
-define('DB_USER', 'aidan.schneider');
+define('DB_USER', 'user');
 define('DB_PASSWORD', 'password');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'forum2');
+define('DB_NAME', 'forum');
 
 // Make the connection:
-$dbc = @mysqli_connect (DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) OR die ('Could not connect to MySQL: ' . mysqli_connect_error() );
+$dbc = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) OR die('Could not connect to MySQL: ' . mysqli_connect_error() );
 
 // Set the encoding...
 mysqli_set_charset($dbc, 'utf8');
-
-// Use this next option if your system doesn't support mysqli_set_charset().
-//mysqli_query($dbc, 'SET NAMES utf8');
-
-
-?>
